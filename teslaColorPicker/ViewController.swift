@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var redChange: UISlider!
     
+    @IBOutlet weak var carBody: UIImageView!
     
     @IBOutlet weak var greenChange: UISlider!
     
@@ -25,10 +26,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var blueChange: UISlider!
     
     
-    @IBOutlet weak var carMask: UIImageView!
-    
     
     @IBOutlet weak var redText: UILabel!
+    
     
     @IBOutlet weak var GreenText: UILabel!
     
@@ -47,25 +47,18 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 設置遮罩
-        if let maskImage = carMask.image?.cgImage {
-            let maskLayer = CALayer()
-            maskLayer.contents = maskImage
-            maskLayer.frame = carImage.bounds  // 确保遮罩层与车身图片大小相同
-            maskLayer.contentsGravity = .resizeAspectFill  // 保持宽高比填充
-            
-            carImage.layer.mask = maskLayer
-            carImage.layer.masksToBounds = true
-            
-            // 隐藏遮罩图片视图，因为我们只需要它的图像数据
-            carMask.isHidden = true
-            
-            carImage.layer.compositingFilter = "sourceAtop"
+        var image = UIImage(named: "carBody")
+        let carBodyView = UIImageView(image: image)
+        carBodyView.frame = carBodyView.bounds
+        carBodyView.contentMode = .scaleAspectFit
+        carBodyView.mask = carBodyView
+        carBodyView.backgroundColor = UIColor(red: 0, green: 222/255, blue: 0, alpha: 1)
+        
             // Do any additional setup after loading the view.
-        }
         
         
     }
-    
+
     
     @IBAction func changeColor(_ sender: Any) {
         let color = UIColor(red: CGFloat(redChange.value),
@@ -95,4 +88,5 @@ class ViewController: UIViewController {
         
     }
     
-}
+
+    }
