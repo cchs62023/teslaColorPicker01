@@ -32,17 +32,11 @@
                                 <rect key="frame" x="74" y="584" width="244" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
-                                <connections>
-                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="fWH-p0-WZn"/>
-                                </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="vxP-6O-6b9">
                                 <rect key="frame" x="74" y="630" width="244" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
-                                <connections>
-                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="doI-ck-H7Q"/>
-                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tesla Model S Color Picker" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I88-ed-9KM">
                                 <rect key="frame" x="92" y="81" width="210" height="21"/>
@@ -55,9 +49,6 @@
                                 <rect key="frame" x="74" y="679" width="244" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
-                                <connections>
-                                    <action selector="changeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="f8Q-kb-RWG"/>
-                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color R" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dt-eW-b2P">
                                 <rect key="frame" x="16" y="590" width="48" height="17"/>
@@ -108,15 +99,15 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Random color" cornerStyle="medium"/>
                                 <connections>
-                                    <action selector="random:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAK-d2-qdi"/>
+                                    <action selector="random:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RkZ-w9-sRc"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="teslaPng" translatesAutoresizingMaskIntoConstraints="NO" id="XHn-2L-6k2">
-                                <rect key="frame" x="0.0" y="177" width="393" height="220"/>
+                                <rect key="frame" x="1" y="209" width="393" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="carMask" translatesAutoresizingMaskIntoConstraints="NO" id="yZL-oz-NmP">
-                                <rect key="frame" x="0.0" y="177" width="393" height="220"/>
+                                <rect key="frame" x="1" y="254" width="393" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -128,7 +119,6 @@
                         <outlet property="blueChange" destination="Q3w-wv-7PP" id="VwI-Nq-FDi"/>
                         <outlet property="carImage" destination="XHn-2L-6k2" id="wmZ-jT-iXY"/>
                         <outlet property="carMask" destination="yZL-oz-NmP" id="hA5-Nk-WQs"/>
-                        <outlet property="changeColor" destination="2oV-jX-b6i" id="pvj-Nc-eYN"/>
                         <outlet property="greenChange" destination="vxP-6O-6b9" id="aSi-Jd-AY6"/>
                         <outlet property="redChange" destination="eQQ-Hg-NhU" id="ojT-ou-4aR"/>
                     </connections>

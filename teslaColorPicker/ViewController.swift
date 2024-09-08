@@ -44,25 +44,37 @@ class ViewController: UIViewController {
             // 隐藏遮罩图片视图，因为我们只需要它的图像数据
             carMask.isHidden = true
             
-            
+            carImage.layer.compositingFilter = "sourceAtop"
             // Do any additional setup after loading the view.
         }
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    }
 
+    }
+    
+    
+    
+    @IBAction func changeColor(_ sender: Any) {
+        let color = UIColor(red: CGFloat(redChange.value),
+                              green: CGFloat(greenChange.value),
+                              blue: CGFloat(blueChange.value),
+                              alpha: 1)
+        carImage.backgroundColor = color
+    }
+        
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func random(_ sender: Any) {
+        redChange.value = Float.random(in: 0...1)
+              greenChange.value = Float.random(in: 0...1)
+              blueChange.value = Float.random(in: 0...1)
+              changeColor(self)
+    }
+    
         
     }
     
