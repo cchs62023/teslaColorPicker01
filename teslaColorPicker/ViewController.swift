@@ -48,11 +48,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // 設置遮罩
         var image = UIImage(named: "carBody")
-        let carBodyView = UIImageView(image: image)
-        carBodyView.frame = carBodyView.bounds
-        carBodyView.contentMode = .scaleAspectFit
-        carBodyView.mask = carBodyView
-        carBodyView.backgroundColor = UIColor(red: 0, green: 222/255, blue: 0, alpha: 1)
+        let carBodyImageView = UIImageView(image: image)
+        carBodyImageView.frame = carBody.bounds
+        carBodyImageView.contentMode = .scaleAspectFit
+        carBody.mask = carBodyImageView
+        carBody.backgroundColor = UIColor(red: 0, green: 222/255, blue: 0, alpha: 1)
         
             // Do any additional setup after loading the view.
         
